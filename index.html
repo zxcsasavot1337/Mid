@@ -1,6 +1,3 @@
-Вот полный HTML-код страницы с добавленным оффером «А-Деньги» в раздел «Хит» для суммы до 30 000 ₽ и обновленной ссылкой.
-
-```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -31,6 +28,8 @@
       --warn: #fbbf24;
       --success: #34d399;
       --success-mid: #6ee7b7;
+      --purple: #a855f7;
+      --gold: #f59e0b;
       --radius: 16px;
       --radius-lg: 24px;
       --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.50), inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -54,7 +53,7 @@
       position: relative;
     }
 
-    /* ─── ГАЛАКТИКА НА ФОНЕ ─── */
+    /* ─── ГАЛАКТИКА ─── */
     #galaxy {
       position: fixed;
       top: 0;
@@ -80,15 +79,8 @@
     }
 
     @keyframes pulse-sun {
-      0%,
-      100% {
-        transform: translate(-50%, -50%) scale(1);
-        box-shadow: 0 0 80px rgba(255, 200, 50, 0.4), 0 0 160px rgba(255, 150, 0, 0.2);
-      }
-      50% {
-        transform: translate(-50%, -50%) scale(1.1);
-        box-shadow: 0 0 120px rgba(255, 200, 50, 0.6), 0 0 200px rgba(255, 150, 0, 0.3);
-      }
+      0%, 100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 80px rgba(255,200,50,0.4), 0 0 160px rgba(255,150,0,0.2); }
+      50% { transform: translate(-50%, -50%) scale(1.1); box-shadow: 0 0 120px rgba(255,200,50,0.6), 0 0 200px rgba(255,150,0,0.3); }
     }
 
     .orbit {
@@ -102,12 +94,8 @@
     }
 
     @keyframes rotate-orbit {
-      0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-      }
-      100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-      }
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
     }
 
     .planet {
@@ -119,54 +107,12 @@
       box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.4);
     }
 
-    .planet-1 {
-      width: 12px;
-      height: 12px;
-      background: radial-gradient(circle at 30% 30%, #ff8a8a, #c0392b);
-      box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
-      margin-left: 60px;
-      margin-top: -6px;
-    }
-    .planet-2 {
-      width: 18px;
-      height: 18px;
-      background: radial-gradient(circle at 30% 30%, #f5b041, #d35400);
-      box-shadow: 0 0 25px rgba(243, 156, 18, 0.3);
-      margin-left: 110px;
-      margin-top: -9px;
-    }
-    .planet-3 {
-      width: 22px;
-      height: 22px;
-      background: radial-gradient(circle at 30% 30%, #5dade2, #2471a3);
-      box-shadow: 0 0 30px rgba(52, 152, 219, 0.3);
-      margin-left: 170px;
-      margin-top: -11px;
-    }
-    .planet-4 {
-      width: 28px;
-      height: 28px;
-      background: radial-gradient(circle at 30% 30%, #58d68d, #1a7a3a);
-      box-shadow: 0 0 35px rgba(46, 204, 113, 0.3);
-      margin-left: 240px;
-      margin-top: -14px;
-    }
-    .planet-5 {
-      width: 16px;
-      height: 16px;
-      background: radial-gradient(circle at 30% 30%, #ec7063, #922b21);
-      box-shadow: 0 0 25px rgba(231, 76, 60, 0.3);
-      margin-left: 320px;
-      margin-top: -8px;
-    }
-    .planet-6 {
-      width: 20px;
-      height: 20px;
-      background: radial-gradient(circle at 30% 30%, #c39bd3, #6c3483);
-      box-shadow: 0 0 30px rgba(165, 105, 189, 0.3);
-      margin-left: 400px;
-      margin-top: -10px;
-    }
+    .planet-1 { width: 12px; height: 12px; background: radial-gradient(circle at 30% 30%, #ff8a8a, #c0392b); box-shadow: 0 0 20px rgba(255,107,107,0.3); margin-left: 60px; margin-top: -6px; }
+    .planet-2 { width: 18px; height: 18px; background: radial-gradient(circle at 30% 30%, #f5b041, #d35400); box-shadow: 0 0 25px rgba(243,156,18,0.3); margin-left: 110px; margin-top: -9px; }
+    .planet-3 { width: 22px; height: 22px; background: radial-gradient(circle at 30% 30%, #5dade2, #2471a3); box-shadow: 0 0 30px rgba(52,152,219,0.3); margin-left: 170px; margin-top: -11px; }
+    .planet-4 { width: 28px; height: 28px; background: radial-gradient(circle at 30% 30%, #58d68d, #1a7a3a); box-shadow: 0 0 35px rgba(46,204,113,0.3); margin-left: 240px; margin-top: -14px; }
+    .planet-5 { width: 16px; height: 16px; background: radial-gradient(circle at 30% 30%, #ec7063, #922b21); box-shadow: 0 0 25px rgba(231,76,60,0.3); margin-left: 320px; margin-top: -8px; }
+    .planet-6 { width: 20px; height: 20px; background: radial-gradient(circle at 30% 30%, #c39bd3, #6c3483); box-shadow: 0 0 30px rgba(165,105,189,0.3); margin-left: 400px; margin-top: -10px; }
 
     .planet-4-ring {
       position: absolute;
@@ -189,36 +135,13 @@
       animation: rotate-arm 60s linear infinite;
     }
 
-    .spiral-arm-1 {
-      width: 300px;
-      height: 300px;
-      border-top-color: rgba(74, 122, 255, 0.04);
-      border-right-color: rgba(168, 85, 247, 0.04);
-      animation-duration: 60s;
-    }
-    .spiral-arm-2 {
-      width: 500px;
-      height: 500px;
-      border-bottom-color: rgba(74, 122, 255, 0.03);
-      border-left-color: rgba(168, 85, 247, 0.03);
-      animation-duration: 80s;
-      animation-direction: reverse;
-    }
-    .spiral-arm-3 {
-      width: 700px;
-      height: 700px;
-      border-top-color: rgba(236, 72, 153, 0.02);
-      border-right-color: rgba(236, 72, 153, 0.02);
-      animation-duration: 100s;
-    }
+    .spiral-arm-1 { width: 300px; height: 300px; border-top-color: rgba(74,122,255,0.04); border-right-color: rgba(168,85,247,0.04); animation-duration: 60s; }
+    .spiral-arm-2 { width: 500px; height: 500px; border-bottom-color: rgba(74,122,255,0.03); border-left-color: rgba(168,85,247,0.03); animation-duration: 80s; animation-direction: reverse; }
+    .spiral-arm-3 { width: 700px; height: 700px; border-top-color: rgba(236,72,153,0.02); border-right-color: rgba(236,72,153,0.02); animation-duration: 100s; }
 
     @keyframes rotate-arm {
-      0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-      }
-      100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-      }
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
     }
 
     .star-dot {
@@ -229,14 +152,8 @@
     }
 
     @keyframes twinkle-star {
-      0% {
-        opacity: 0.1;
-        transform: scale(0.5);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1.2);
-      }
+      0% { opacity: 0.1; transform: scale(0.5); }
+      100% { opacity: 1; transform: scale(1.2); }
     }
 
     /* ─── ОСНОВНОЙ КОНТЕНТ ─── */
@@ -248,16 +165,9 @@
       z-index: 1;
     }
 
-    /* ── АНИМАЦИЯ ПОЯВЛЕНИЯ ── */
     @keyframes fadeUp {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .mfo-card {
@@ -265,7 +175,6 @@
       opacity: 1;
     }
 
-    /* ── КАРТОЧКА ── */
     .mfo-card {
       transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.1),
                   box-shadow 0.35s ease,
@@ -307,9 +216,7 @@
       transition: transform 0.3s ease;
     }
 
-    .mfo-card:hover .badge-hit {
-      transform: scale(1.05);
-    }
+    .mfo-card:hover .badge-hit { transform: scale(1.05); }
 
     .badge-popular {
       display: inline-flex;
@@ -325,9 +232,7 @@
       transition: transform 0.3s ease;
     }
 
-    .mfo-card:hover .badge-popular {
-      transform: scale(1.05);
-    }
+    .mfo-card:hover .badge-popular { transform: scale(1.05); }
 
     .badge-often {
       display: inline-flex;
@@ -343,20 +248,11 @@
       transition: transform 0.3s ease;
     }
 
-    .mfo-card:hover .badge-often {
-      transform: scale(1.05);
-    }
+    .mfo-card:hover .badge-often { transform: scale(1.05); }
 
     @keyframes pulse-hit {
-      0%,
-      100% {
-        box-shadow: 0 2px 20px rgba(239, 68, 68, 0.50);
-        transform: scale(1);
-      }
-      50% {
-        box-shadow: 0 4px 40px rgba(239, 68, 68, 0.80);
-        transform: scale(1.06);
-      }
+      0%, 100% { box-shadow: 0 2px 20px rgba(239,68,68,0.50); transform: scale(1); }
+      50% { box-shadow: 0 4px 40px rgba(239,68,68,0.80); transform: scale(1.06); }
     }
 
     /* ── HEADER ── */
@@ -466,23 +362,11 @@
       transition: all 0.3s ease;
     }
 
-    .pill:hover {
-      transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.08);
-    }
+    .pill:hover { transform: translateY(-2px); background: rgba(255,255,255,0.08); }
 
-    .pill-green {
-      color: var(--success);
-      border-color: rgba(52, 211, 153, 0.20);
-    }
-    .pill-blue {
-      color: var(--accent);
-      border-color: rgba(74, 122, 255, 0.20);
-    }
-    .pill-warn {
-      color: var(--warn);
-      border-color: rgba(251, 191, 36, 0.20);
-    }
+    .pill-green { color: var(--success); border-color: rgba(52,211,153,0.20); }
+    .pill-blue { color: var(--accent); border-color: rgba(74,122,255,0.20); }
+    .pill-warn { color: var(--warn); border-color: rgba(251,191,36,0.20); }
 
     /* ── ВКЛАДКИ ── */
     .tabs-wrap {
@@ -500,6 +384,7 @@
       max-width: 1120px;
       margin: 0 auto;
       padding: 0 24px;
+      flex-wrap: wrap;
     }
 
     .tab-btn {
@@ -516,22 +401,11 @@
       font-family: inherit;
     }
 
-    .tab-btn:hover {
-      color: var(--text-primary);
-    }
+    .tab-btn:hover { color: var(--text-primary); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
 
-    .tab-btn.active {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
-    }
-
-    .tab-content {
-      display: none;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
 
     /* ── INNER TABS ── */
     .inner-tabs-wrap {
@@ -542,6 +416,7 @@
     .inner-tabs {
       display: flex;
       gap: 0;
+      flex-wrap: wrap;
     }
 
     .inner-tab-btn {
@@ -558,27 +433,12 @@
       font-family: inherit;
     }
 
-    .inner-tab-btn:hover {
-      color: var(--text-primary);
-    }
+    .inner-tab-btn:hover { color: var(--text-primary); }
+    .inner-tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
 
-    .inner-tab-btn.active {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
-    }
-
-    .inner-tab-content {
-      display: none;
-    }
-
-    .inner-tab-content.active {
-      display: grid;
-    }
-
-    .inner-tab-content {
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 18px;
-    }
+    .inner-tab-content { display: none; }
+    .inner-tab-content.active { display: grid; }
+    .inner-tab-content { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
 
     /* ── MAIN ── */
     .main {
@@ -628,9 +488,7 @@
       display: none;
     }
 
-    .mfo-card.visible {
-      display: flex;
-    }
+    .mfo-card.visible { display: flex; }
 
     .card-top {
       display: flex;
@@ -671,25 +529,11 @@
       transition: all 0.3s ease;
     }
 
-    .mfo-card:hover .apr-badge {
-      transform: scale(1.05);
-    }
+    .mfo-card:hover .apr-badge { transform: scale(1.05); }
 
-    .apr-vhigh {
-      background: rgba(52, 211, 153, 0.15);
-      color: var(--success);
-      border: 1px solid rgba(52, 211, 153, 0.15);
-    }
-    .apr-high {
-      background: rgba(110, 231, 183, 0.10);
-      color: var(--success-mid);
-      border: 1px solid rgba(110, 231, 183, 0.12);
-    }
-    .apr-mid {
-      background: rgba(74, 122, 255, 0.10);
-      color: var(--accent);
-      border: 1px solid rgba(74, 122, 255, 0.12);
-    }
+    .apr-vhigh { background: rgba(52,211,153,0.15); color: var(--success); border: 1px solid rgba(52,211,153,0.15); }
+    .apr-high { background: rgba(110,231,183,0.10); color: var(--success-mid); border: 1px solid rgba(110,231,183,0.12); }
+    .apr-mid { background: rgba(74,122,255,0.10); color: var(--accent); border: 1px solid rgba(74,122,255,0.12); }
 
     hr.div {
       border: none;
@@ -697,9 +541,7 @@
       transition: border-color 0.3s ease;
     }
 
-    .mfo-card:hover hr.div {
-      border-color: rgba(255, 255, 255, 0.15);
-    }
+    .mfo-card:hover hr.div { border-color: rgba(255,255,255,0.15); }
 
     .aud-banner {
       display: flex;
@@ -741,9 +583,7 @@
       font-weight: 700;
       color: var(--text-primary);
     }
-    .stat-value.red {
-      color: var(--danger);
-    }
+    .stat-value.red { color: var(--danger); }
 
     .bar-wrap {
       display: flex;
@@ -765,9 +605,7 @@
       transition: all 0.3s ease;
     }
 
-    .mfo-card:hover .bar-pct {
-      transform: scale(1.05);
-    }
+    .mfo-card:hover .bar-pct { transform: scale(1.05); }
 
     .bar-track {
       height: 6px;
@@ -795,25 +633,11 @@
       transition: all 0.3s ease;
     }
 
-    .mfo-card:hover .tag {
-      transform: translateY(-1px);
-    }
+    .mfo-card:hover .tag { transform: translateY(-1px); }
 
-    .tag-yes {
-      background: rgba(52, 211, 153, 0.08);
-      color: var(--success);
-      border-color: rgba(52, 211, 153, 0.12);
-    }
-    .tag-blue {
-      background: rgba(74, 122, 255, 0.08);
-      color: var(--accent);
-      border-color: rgba(74, 122, 255, 0.12);
-    }
-    .tag-star {
-      background: rgba(251, 191, 36, 0.10);
-      color: var(--warn);
-      border-color: rgba(251, 191, 36, 0.15);
-    }
+    .tag-yes { background: rgba(52,211,153,0.08); color: var(--success); border-color: rgba(52,211,153,0.12); }
+    .tag-blue { background: rgba(74,122,255,0.08); color: var(--accent); border-color: rgba(74,122,255,0.12); }
+    .tag-star { background: rgba(251,191,36,0.10); color: var(--warn); border-color: rgba(251,191,36,0.15); }
 
     .erid {
       font-size: 10px;
@@ -827,9 +651,7 @@
       transition: all 0.3s ease;
     }
 
-    .mfo-card:hover .erid {
-      border-color: rgba(255, 255, 255, 0.10);
-    }
+    .mfo-card:hover .erid { border-color: rgba(255,255,255,0.10); }
 
     /* ── CTA ── */
     .cta {
@@ -867,9 +689,7 @@
       transition: opacity 0.4s ease;
     }
 
-    .cta:hover::before {
-      opacity: 1;
-    }
+    .cta:hover::before { opacity: 1; }
 
     .cta:hover {
       transform: translateY(-3px) scale(1.02);
@@ -877,9 +697,7 @@
       letter-spacing: 0.6px;
     }
 
-    .cta:active {
-      transform: translateY(0) scale(0.97);
-    }
+    .cta:active { transform: translateY(0) scale(0.97); }
 
     /* ── DISCLAIMER ── */
     .disclaimer {
@@ -899,9 +717,7 @@
       background: rgba(251, 191, 36, 0.06);
     }
 
-    .disclaimer strong {
-      color: var(--warn);
-    }
+    .disclaimer strong { color: var(--warn); }
 
     /* ── FOOTER ── */
     footer {
@@ -941,9 +757,7 @@
       transition: all 0.3s ease;
     }
 
-    .fc:hover {
-      transform: translateX(4px);
-    }
+    .fc:hover { transform: translateX(4px); }
 
     .fc-brand {
       font-size: 13px;
@@ -978,92 +792,27 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
-      .hero h1 {
-        font-size: 24px;
-      }
-      .hero {
-        padding: 28px 16px 24px;
-      }
-      .stats-row {
-        grid-template-columns: 1fr 1fr;
-      }
-      .header-row {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .header-note {
-        text-align: left;
-        max-width: 100%;
-      }
-      .cards-grid {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
-      .mfo-card {
-        padding: 14px 16px 16px;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-      .tabs {
-        gap: 4px;
-        padding: 4px;
-        flex-wrap: wrap;
-      }
-      .tab-btn {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-      .mfo-card:hover {
-        transform: translateY(-4px) scale(1.005);
-      }
-      .inner-tabs {
-        flex-wrap: wrap;
-        gap: 4px;
-      }
-      .inner-tab-btn {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
+      .hero h1 { font-size: 24px; }
+      .hero { padding: 28px 16px 24px; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      .header-row { flex-direction: column; align-items: flex-start; }
+      .header-note { text-align: left; max-width: 100%; }
+      .cards-grid { grid-template-columns: 1fr; gap: 14px; }
+      .mfo-card { padding: 14px 16px 16px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .tabs { gap: 4px; padding: 4px; flex-wrap: wrap; }
+      .tab-btn { font-size: 12px; padding: 6px 12px; }
+      .mfo-card:hover { transform: translateY(-4px) scale(1.005); }
+      .inner-tabs { flex-wrap: wrap; gap: 4px; }
+      .inner-tab-btn { font-size: 12px; padding: 6px 12px; }
 
-      .planet-5,
-      .planet-6,
-      .spiral-arm-2,
-      .spiral-arm-3 {
-        display: none;
-      }
-      .sun {
-        width: 40px;
-        height: 40px;
-        box-shadow: 0 0 40px rgba(255, 200, 50, 0.3);
-      }
-      .planet-1 {
-        width: 8px;
-        height: 8px;
-        margin-left: 35px;
-      }
-      .planet-2 {
-        width: 10px;
-        height: 10px;
-        margin-left: 65px;
-      }
-      .planet-3 {
-        width: 12px;
-        height: 12px;
-        margin-left: 100px;
-      }
-      .planet-4 {
-        width: 14px;
-        height: 14px;
-        margin-left: 140px;
-      }
-      .planet-4-ring {
-        width: 28px;
-        height: 28px;
-        margin-left: 133px;
-        margin-top: -14px;
-        border-width: 1px;
-      }
+      .planet-5, .planet-6, .spiral-arm-2, .spiral-arm-3 { display: none; }
+      .sun { width: 40px; height: 40px; box-shadow: 0 0 40px rgba(255,200,50,0.3); }
+      .planet-1 { width: 8px; height: 8px; margin-left: 35px; }
+      .planet-2 { width: 10px; height: 10px; margin-left: 65px; }
+      .planet-3 { width: 12px; height: 12px; margin-left: 100px; }
+      .planet-4 { width: 14px; height: 14px; margin-left: 140px; }
+      .planet-4-ring { width: 28px; height: 28px; margin-left: 133px; margin-top: -14px; border-width: 1px; }
     }
   </style>
 </head>
@@ -1076,25 +825,12 @@
     <div class="spiral-arm spiral-arm-2"></div>
     <div class="spiral-arm spiral-arm-3"></div>
 
-    <div class="orbit" style="--duration:15s; width:140px; height:140px;">
-      <div class="planet planet-1"></div>
-    </div>
-    <div class="orbit" style="--duration:22s; width:240px; height:240px;">
-      <div class="planet planet-2"></div>
-    </div>
-    <div class="orbit" style="--duration:30s; width:360px; height:360px;">
-      <div class="planet planet-3"></div>
-    </div>
-    <div class="orbit" style="--duration:40s; width:500px; height:500px;">
-      <div class="planet planet-4"></div>
-      <div class="planet-4-ring"></div>
-    </div>
-    <div class="orbit" style="--duration:52s; width:660px; height:660px;">
-      <div class="planet planet-5"></div>
-    </div>
-    <div class="orbit" style="--duration:65s; width:820px; height:820px;">
-      <div class="planet planet-6"></div>
-    </div>
+    <div class="orbit" style="--duration:15s; width:140px; height:140px;"><div class="planet planet-1"></div></div>
+    <div class="orbit" style="--duration:22s; width:240px; height:240px;"><div class="planet planet-2"></div></div>
+    <div class="orbit" style="--duration:30s; width:360px; height:360px;"><div class="planet planet-3"></div></div>
+    <div class="orbit" style="--duration:40s; width:500px; height:500px;"><div class="planet planet-4"></div><div class="planet-4-ring"></div></div>
+    <div class="orbit" style="--duration:52s; width:660px; height:660px;"><div class="planet planet-5"></div></div>
+    <div class="orbit" style="--duration:65s; width:820px; height:820px;"><div class="planet planet-6"></div></div>
 
     <div id="stars-container"></div>
   </div>
@@ -1122,44 +858,40 @@
     </div>
   </section>
 
-  <!-- ─── ВКЛАДКИ ─── -->
+  <!-- ─── ВКЛАДКИ (только Хит и Вам может понравится) ─── -->
   <div class="tabs-wrap">
     <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab('tab30k', this)">💰 До 30 000 ₽</button>
-      <button class="tab-btn" onclick="switchTab('tab10k', this)">✅ Ещё больше предложений</button>
+      <button class="tab-btn active" onclick="switchTab('tab1', this)">🔥 Хит — лучшие предложения</button>
+      <button class="tab-btn" onclick="switchTab('tab2', this)">⭐ Вам может понравится</button>
     </div>
   </div>
 
   <!-- ─── КАРТОЧКИ ─── -->
   <main class="main">
 
-    <!-- ===== ВКЛАДКА 1: ДО 30 000 ₽ ===== -->
-    <div id="tab30k" class="tab-content active">
+    <!-- ===== ВКЛАДКА 1: ХИТ — лучшие предложения (до 30 000 ₽) ===== -->
+    <div id="tab1" class="tab-content active">
       <div class="section-meta">
-        <span class="section-label">💰 До 30 000 ₽ · для среднего КР</span>
+        <span class="section-label">🔥 Хит — лучшие предложения · до 30 000 ₽</span>
         <span class="section-note">Актуально на 2026 год</span>
       </div>
 
       <div class="inner-tabs-wrap">
         <div class="inner-tabs">
-          <button class="inner-tab-btn active" onclick="switchInner('t30_hit', this)">🔥 Хит</button>
-          <button class="inner-tab-btn" onclick="switchInner('t30_pop', this)">⭐ Популярное</button>
-          <button class="inner-tab-btn" onclick="switchInner('t30_often', this)">👍 Часто выбирают</button>
+          <button class="inner-tab-btn active" onclick="switchInner('t1_hit', this)">🔥 ХИТ</button>
+          <button class="inner-tab-btn" onclick="switchInner('t1_pop', this)">⭐ Популярное</button>
+          <button class="inner-tab-btn" onclick="switchInner('t1_often', this)">👍 Часто выбирают</button>
         </div>
       </div>
 
       <!-- ХИТ (до 30к) -->
-      <div id="t30_hit" class="inner-tab-content active">
+      <div id="t1_hit" class="inner-tab-content active">
         <div class="mfo-card visible" data-type="hit" style="border-color:rgba(248,113,113,0.20);border-width:2px;">
           <div class="card-badge-wrap"><span class="badge-hit">🔥 ХИТ</span></div>
           <div class="card-top"><div><div class="card-name">Finters</div><div class="card-sub">ООО МФК «Финтерс»</div></div><span class="apr-badge apr-vhigh">~90%</span></div>
           <hr class="div">
           <div class="aud-banner">📊 Одобряют 95% заявок, первый заём 0%</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 31 дня</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0% (1-й займ)</span></div>
-          </div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 31 дня</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0% (1-й займ)</span></div></div>
           <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#34d399">90%</span></div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
           <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Без справок</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
           <div class="erid">Реклама · erid: уточняется · Рекламодатель: ООО МФК «Финтерс»</div>
@@ -1171,28 +903,19 @@
           <div class="card-top"><div><div class="card-name">БыстроДеньги</div><div class="card-sub">ООО МФК «Быстроденьги»</div></div><span class="apr-badge apr-high">~72%</span></div>
           <hr class="div">
           <div class="aud-banner">📊 16 лет на рынке, доверяют при средней КИ</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 168 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 168 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
           <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#6ee7b7">72%</span></div><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div></div>
           <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Длинный срок</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
           <div class="erid">Реклама · erid: LjN8JtHPe · Рекламодатель: ООО МФК «Быстроденьги»</div>
           <a class="cta" href="https://t.fincpanetwork.ru/click/91237/613?erid=LjN8JtHPe" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
         </div>
 
-        <!-- НОВАЯ КАРТОЧКА: А-Деньги -->
         <div class="mfo-card visible" data-type="hit" style="border-color:rgba(248,113,113,0.20);border-width:2px;">
           <div class="card-badge-wrap"><span class="badge-hit">🔥 ХИТ</span></div>
           <div class="card-top"><div><div class="card-name">А-Деньги</div><div class="card-sub">ООО МКК «А ДЕНЬГИ»</div></div><span class="apr-badge apr-high">~80%</span></div>
           <hr class="div">
           <div class="aud-banner">📊 Быстрое одобрение при средней кредитной истории</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
           <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#6ee7b7">80%</span></div><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div></div>
           <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Без справок</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
           <div class="erid">Реклама · erid: уточняется · Рекламодатель: ООО МКК «А ДЕНЬГИ»</div>
@@ -1201,17 +924,13 @@
       </div>
 
       <!-- Популярное (до 30к) -->
-      <div id="t30_pop" class="inner-tab-content">
+      <div id="t1_pop" class="inner-tab-content">
         <div class="mfo-card visible" data-type="popular" style="border-color:rgba(52,211,153,0.20);border-width:2px;">
           <div class="card-badge-wrap"><span class="badge-popular">⭐ Популярное</span></div>
           <div class="card-top"><div><div class="card-name">Центрофинанс</div><div class="card-sub">ООО МКК «Центрофинанс»</div></div><span class="apr-badge apr-vhigh">~88%</span></div>
           <hr class="div">
           <div class="aud-banner">📊 Первый заём 0% на 14 дней при средней КИ</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 14 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0% (1-й займ)</span></div>
-          </div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 14 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0% (1-й займ)</span></div></div>
           <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#34d399">88%</span></div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
           <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Без справок</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
           <div class="erid">Реклама · erid: уточняется · Рекламодатель: ООО МКК «Центрофинанс»</div>
@@ -1223,46 +942,22 @@
           <div class="card-top"><div><div class="card-name">Skela Money</div><div class="card-sub">ООО МКК «Скорый Займ»</div></div><span class="apr-badge apr-mid">~65%</span></div>
           <hr class="div">
           <div class="aud-banner">📊 Молодая МФО с гибким скорингом</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
           <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#4a7aff">65%</span></div><div class="bar-track"><div class="bar-fill" style="width:65%; background: linear-gradient(90deg, #4a7aff, #7c3aed);"></div></div></div>
           <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Без справок</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
           <div class="erid">Реклама · erid: 2W5zFHDhRjW · Рекламодатель: ООО МКК «Скорый Займ»</div>
           <a class="cta" href="https://t.fincpanetwork.ru/click/91237/295?erid=2W5zFHDhRjW" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
         </div>
-
-        <div class="mfo-card visible" data-type="popular" style="border-color:rgba(52,211,153,0.20);border-width:2px;">
-          <div class="card-badge-wrap"><span class="badge-popular">⭐ Популярное</span></div>
-          <div class="card-top"><div><div class="card-name">Надо Денег</div><div class="card-sub">ООО МКК «МаниМания»</div></div><span class="apr-badge apr-high">~75%</span></div>
-          <hr class="div">
-          <div class="aud-banner">📊 Быстрое решение при средней КИ</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
-          <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#6ee7b7">75%</span></div><div class="bar-track"><div class="bar-fill" style="width:75%"></div></div></div>
-          <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Только паспорт</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
-          <div class="erid">Реклама · erid: указан в ссылке · Рекламодатель: ООО МКК «МаниМания»</div>
-          <a class="cta" href="https://t-cpa.ru/49jFrM" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
-        </div>
       </div>
 
       <!-- Часто выбирают (до 30к) -->
-      <div id="t30_often" class="inner-tab-content">
+      <div id="t1_often" class="inner-tab-content">
         <div class="mfo-card visible" data-type="often" style="border-color:rgba(74,122,255,0.20);border-width:2px;">
           <div class="card-badge-wrap"><span class="badge-often">👍 Часто выбирают</span></div>
           <div class="card-top"><div><div class="card-name">ДоЗарплаты</div><div class="card-sub">ООО МКК «ДоЗарплаты»</div></div><span class="apr-badge apr-vhigh">~85%</span></div>
           <hr class="div">
           <div class="aud-banner">📊 Быстрое решение при средней кредитной истории</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
           <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#34d399">85%</span></div><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div></div>
           <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Только паспорт</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
           <div class="erid">Реклама · erid: 2W5zFHdNTDT · Рекламодатель: ООО МКК «ДоЗарплаты»</div>
@@ -1274,11 +969,7 @@
           <div class="card-top"><div><div class="card-name">Boostra</div><div class="card-sub">ООО МКК «Лорд»</div></div><span class="apr-badge apr-high">~75%</span></div>
           <hr class="div">
           <div class="aud-banner">📊 Постепенно увеличивают лимиты при средней КИ</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
           <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#6ee7b7">75%</span></div><div class="bar-track"><div class="bar-fill" style="width:75%"></div></div></div>
           <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Без справок</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
           <div class="erid">Реклама · erid: 2W5zFGGQxQh · Рекламодатель: ООО МКК «Лорд»</div>
@@ -1290,46 +981,62 @@
           <div class="card-top"><div><div class="card-name">Веб-Займ</div><div class="card-sub">ООО МКК «Академическая»</div></div><span class="apr-badge apr-high">~77%</span></div>
           <hr class="div">
           <div class="aud-banner">📊 Стабильный игрок для среднего сегмента</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 30 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
           <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#6ee7b7">77%</span></div><div class="bar-track"><div class="bar-fill" style="width:77%"></div></div></div>
           <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Без справок</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
           <div class="erid">Реклама · erid: указан в ссылке · Рекламодатель: ООО МКК «Академическая»</div>
           <a class="cta" href="https://trk.xplink.io/click?pid=12061&offer_id=2475" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
         </div>
       </div>
-    </div><!-- /tab30k -->
+    </div><!-- /tab1 -->
 
-    <!-- ===== ВКЛАДКА 2: ЕЩЁ БОЛЬШЕ ПРЕДЛОЖЕНИЙ ===== -->
-    <div id="tab10k" class="tab-content">
+    <!-- ===== ВКЛАДКА 2: ВАМ МОЖЕТ ПОНРАВИТСЯ (до 10 000 ₽) ===== -->
+    <div id="tab2" class="tab-content">
       <div class="section-meta">
-        <span class="section-label">✅ Ещё больше предложений · до 10 000 ₽</span>
+        <span class="section-label">⭐ Вам может понравится · до 10 000 ₽</span>
         <span class="section-note">Актуально на 2026 год</span>
       </div>
 
       <div class="inner-tabs-wrap">
         <div class="inner-tabs">
-          <button class="inner-tab-btn active" onclick="switchInner('t10_hit', this)">🔥 Хит</button>
-          <button class="inner-tab-btn" onclick="switchInner('t10_pop', this)">⭐ Популярное</button>
-          <button class="inner-tab-btn" onclick="switchInner('t10_often', this)">👍 Часто выбирают</button>
+          <button class="inner-tab-btn active" onclick="switchInner('t2_hit', this)">🔥 ХИТ</button>
+          <button class="inner-tab-btn" onclick="switchInner('t2_pop', this)">⭐ Популярное</button>
+          <button class="inner-tab-btn" onclick="switchInner('t2_often', this)">👍 Часто выбирают</button>
         </div>
       </div>
 
       <!-- ХИТ (до 10к) -->
-      <div id="t10_hit" class="inner-tab-content active">
+      <div id="t2_hit" class="inner-tab-content active">
+        <div class="mfo-card visible" data-type="hit" style="border-color:rgba(248,113,113,0.20);border-width:2px;">
+          <div class="card-badge-wrap"><span class="badge-hit">🔥 ХИТ</span></div>
+          <div class="card-top"><div><div class="card-name">Lime</div><div class="card-sub">ООО МФК «Лайм-Займ»</div></div><span class="apr-badge apr-vhigh">~92%</span></div>
+          <hr class="div">
+          <div class="aud-banner">📊 Автоодобрение даже при испорченной КИ</div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
+          <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#34d399">92%</span></div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div></div>
+          <div class="tags"><span class="tag tag-yes">✓ Плохая КИ</span><span class="tag tag-yes">✓ Нулевая КИ</span><span class="tag tag-yes">✓ Только паспорт</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
+          <div class="erid">Реклама · erid: LjN8KUyhr · Рекламодатель: ООО МФК «Лайм-Займ»</div>
+          <a class="cta" href="https://go.leadgid.ru/aff_c?aff_id=145486&offer_id=6296&p=10976&erid=LjN8KUyhr" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
+        </div>
+
+        <div class="mfo-card visible" data-type="hit" style="border-color:rgba(248,113,113,0.20);border-width:2px;">
+          <div class="card-badge-wrap"><span class="badge-hit">🔥 ХИТ</span></div>
+          <div class="card-top"><div><div class="card-name">Надо Денег</div><div class="card-sub">ООО МФК «Надо Денег»</div></div><span class="apr-badge apr-vhigh">~90%</span></div>
+          <hr class="div">
+          <div class="aud-banner">📊 Одобрение с просрочками и низким ПКР</div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
+          <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#34d399">90%</span></div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+          <div class="tags"><span class="tag tag-yes">✓ Плохая КИ</span><span class="tag tag-yes">✓ Любые просрочки</span><span class="tag tag-yes">✓ Решение 2 мин</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
+          <div class="erid">Реклама · erid: 2W5zFJ97FJY · Рекламодатель: ООО МФК «Надо Денег»</div>
+          <a class="cta" href="https://t-cpa.ru/49jFrM" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
+        </div>
+
         <div class="mfo-card visible" data-type="hit" style="border-color:rgba(248,113,113,0.20);border-width:2px;">
           <div class="card-badge-wrap"><span class="badge-hit">🔥 ХИТ</span></div>
           <div class="card-top"><div><div class="card-name">Займер</div><div class="card-sub">ПАО МФК «Займер»</div></div><span class="apr-badge apr-vhigh">~88%</span></div>
           <hr class="div">
           <div class="aud-banner">📊 Автоодобрение при средней и хорошей КИ</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
           <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#34d399">88%</span></div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
           <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Автоодобрение</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
           <div class="erid">Реклама · erid: 2W5zFHwA2h6 · Рекламодатель: ПАО МФК «Займер»</div>
@@ -1341,117 +1048,77 @@
           <div class="card-top"><div><div class="card-name">Турбозайм</div><div class="card-sub">ООО МКК «Турбозайм»</div></div><span class="apr-badge apr-high">~82%</span></div>
           <hr class="div">
           <div class="aud-banner">📊 Подходит при нейтральной и средней КИ</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
           <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#34d399">82%</span></div><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div></div>
           <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Пролонгация</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
           <div class="erid">Реклама · erid: 2W5zFHvzYLZ · Рекламодатель: ООО МКК «Турбозайм»</div>
           <a class="cta" href="https://t.fincpanetwork.ru/click/91237/14?erid=2W5zFHvzYLZ" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
         </div>
-
-        <div class="mfo-card visible" data-type="hit" style="border-color:rgba(248,113,113,0.20);border-width:2px;">
-          <div class="card-badge-wrap"><span class="badge-hit">🔥 ХИТ</span></div>
-          <div class="card-top"><div><div class="card-name">MoneyMan</div><div class="card-sub">ООО МФК «Мани Мен»</div></div><span class="apr-badge apr-vhigh">~80%</span></div>
-          <hr class="div">
-          <div class="aud-banner">📊 Оптимален для средней и выше средней КИ</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
-          <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#6ee7b7">80%</span></div><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div></div>
-          <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Только паспорт</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
-          <div class="erid">Реклама · erid: 2W5zFGacKGm · Рекламодатель: ООО МФК «Мани Мен»</div>
-          <a class="cta" href="https://t.fincpanetwork.ru/click/91237/101?erid=2W5zFGacKGm" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
-        </div>
       </div>
 
       <!-- Популярное (до 10к) -->
-      <div id="t10_pop" class="inner-tab-content">
+      <div id="t2_pop" class="inner-tab-content">
         <div class="mfo-card visible" data-type="popular" style="border-color:rgba(52,211,153,0.20);border-width:2px;">
           <div class="card-badge-wrap"><span class="badge-popular">⭐ Популярное</span></div>
-          <div class="card-top"><div><div class="card-name">МигКредит</div><div class="card-sub">ООО МФК «МигКредит»</div></div><span class="apr-badge apr-high">~78%</span></div>
+          <div class="card-top"><div><div class="card-name">Zaymigo</div><div class="card-sub">ООО МФК «Займиго»</div></div><span class="apr-badge apr-high">~85%</span></div>
           <hr class="div">
-          <div class="aud-banner">📊 Подходит при нейтральной и средней КИ</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
-          <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#6ee7b7">78%</span></div><div class="bar-track"><div class="bar-fill" style="width:78%"></div></div></div>
-          <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Без справок</span><span class="tag tag-yes">✓ Онлайн 24/7</span></div>
-          <div class="erid">Реклама · erid: 2W5zFHt2Zms · Рекламодатель: ООО МФК «МигКредит»</div>
-          <a class="cta" href="https://t.fincpanetwork.ru/click/91237/450?erid=2W5zFHt2Zms" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
+          <div class="aud-banner">📊 Кредитная история не имеет значения</div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
+          <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#6ee7b7">85%</span></div><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div></div>
+          <div class="tags"><span class="tag tag-yes">✓ Плохая КИ</span><span class="tag tag-yes">✓ Нулевая КИ</span><span class="tag tag-yes">✓ Только паспорт</span><span class="tag tag-yes">✓ 24/7</span></div>
+          <div class="erid">Реклама · erid: 2W5zFJ97FJY · Рекламодатель: ООО МФК «Займиго»</div>
+          <a class="cta" href="https://go.leadgid.ru/aff_c?aff_id=145486&offer_id=2661&p=10976&erid=2W5zFJ97FJY" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
         </div>
 
         <div class="mfo-card visible" data-type="popular" style="border-color:rgba(52,211,153,0.20);border-width:2px;">
           <div class="card-badge-wrap"><span class="badge-popular">⭐ Популярное</span></div>
           <div class="card-top"><div><div class="card-name">СрочноДеньги</div><div class="card-sub">ООО МКК «Срочноденьги»</div></div><span class="apr-badge apr-high">~80%</span></div>
           <hr class="div">
-          <div class="aud-banner">📊 Выдают при нейтральной КИ без просрочек</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
+          <div class="aud-banner">📊 Рассматривают заявки с просрочками и низким ПКР</div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
           <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#6ee7b7">80%</span></div><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div></div>
-          <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Пролонгация</span><span class="tag tag-yes">✓ Без справок</span></div>
+          <div class="tags"><span class="tag tag-yes">✓ Плохая КИ</span><span class="tag tag-yes">✓ Только паспорт</span><span class="tag tag-yes">✓ Пролонгация</span><span class="tag tag-yes">✓ Онлайн 24/7</span></div>
           <div class="erid">Реклама · erid: LjN8Kaxif · Рекламодатель: ООО МКК «Срочноденьги»</div>
           <a class="cta" href="https://t.fincpanetwork.ru/click/91237/38?erid=LjN8Kaxif" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
         </div>
 
         <div class="mfo-card visible" data-type="popular" style="border-color:rgba(52,211,153,0.20);border-width:2px;">
           <div class="card-badge-wrap"><span class="badge-popular">⭐ Популярное</span></div>
-          <div class="card-top"><div><div class="card-name">Lime</div><div class="card-sub">ООО МФК «Лайм-Займ»</div></div><span class="apr-badge apr-vhigh">~92%</span></div>
+          <div class="card-top"><div><div class="card-name">МигКредит</div><div class="card-sub">ООО МФК «МигКредит»</div></div><span class="apr-badge apr-high">~78%</span></div>
           <hr class="div">
-          <div class="aud-banner">📊 Автоодобрение при средней и хорошей КИ</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
-          <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#34d399">92%</span></div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div></div>
-          <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Только паспорт</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
-          <div class="erid">Реклама · erid: LjN8KUyhr · Рекламодатель: ООО МФК «Лайм-Займ»</div>
-          <a class="cta" href="https://go.leadgid.ru/aff_c?aff_id=145486&offer_id=6296&p=10976&erid=LjN8KUyhr" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
+          <div class="aud-banner">📊 Одобряют с низким ПКР и закрытыми просрочками</div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
+          <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#6ee7b7">78%</span></div><div class="bar-track"><div class="bar-fill" style="width:78%"></div></div></div>
+          <div class="tags"><span class="tag tag-yes">✓ Плохая КИ</span><span class="tag tag-yes">✓ Только паспорт</span><span class="tag tag-yes">✓ Решение 5 мин</span><span class="tag tag-yes">✓ Онлайн 24/7</span></div>
+          <div class="erid">Реклама · erid: 2W5zFHt2Zms · Рекламодатель: ООО МФК «МигКредит»</div>
+          <a class="cta" href="https://t.fincpanetwork.ru/click/91237/450?erid=2W5zFHt2Zms" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
         </div>
       </div>
 
       <!-- Часто выбирают (до 10к) -->
-      <div id="t10_often" class="inner-tab-content">
+      <div id="t2_often" class="inner-tab-content">
         <div class="mfo-card visible" data-type="often" style="border-color:rgba(74,122,255,0.20);border-width:2px;">
           <div class="card-badge-wrap"><span class="badge-often">👍 Часто выбирают</span></div>
-          <div class="card-top"><div><div class="card-name">Webbankir</div><div class="card-sub">ООО МФК «Вэббанкир»</div></div><span class="apr-badge apr-vhigh">~85%</span></div>
+          <div class="card-top"><div><div class="card-name">Белка Кредит</div><div class="card-sub">ООО МКК «Финмодель»</div></div><span class="apr-badge apr-vhigh">~90%</span></div>
           <hr class="div">
-          <div class="aud-banner">📊 Один из лучших вариантов при средней КИ</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 31 дня</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
-          <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#34d399">85%</span></div><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div></div>
-          <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Только паспорт</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
-          <div class="erid">Реклама · erid: LjN8JwPDS · Рекламодатель: ООО МФК «Вэббанкир»</div>
-          <a class="cta" href="https://t.fincpanetwork.ru/click/91237/77?erid=LjN8JwPDS" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
+          <div class="aud-banner">📊 Одобряют при низком кредитном рейтинге и просрочках</div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
+          <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#34d399">90%</span></div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+          <div class="tags"><span class="tag tag-yes">✓ Плохая КИ</span><span class="tag tag-yes">✓ Нулевая КИ</span><span class="tag tag-yes">✓ Без проверки дохода</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
+          <div class="erid">Реклама · erid: 2W5zFK43c2V · Рекламодатель: ООО МКК «Финмодель»</div>
+          <a class="cta" href="https://t.fincpanetwork.ru/click/91237/918?erid=2W5zFK43c2V" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
         </div>
 
         <div class="mfo-card visible" data-type="often" style="border-color:rgba(74,122,255,0.20);border-width:2px;">
           <div class="card-badge-wrap"><span class="badge-often">👍 Часто выбирают</span></div>
-          <div class="card-top"><div><div class="card-name">Белка Кредит</div><div class="card-sub">ООО МКК «Финмодель»</div></div><span class="apr-badge apr-high">~72%</span></div>
+          <div class="card-top"><div><div class="card-name">MoneyMan</div><div class="card-sub">ООО МФК «Мани Мен»</div></div><span class="apr-badge apr-vhigh">~80%</span></div>
           <hr class="div">
-          <div class="aud-banner">📊 Подходит при нейтральной и средней КИ</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
-          <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#6ee7b7">72%</span></div><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div></div>
-          <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Без справок</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
-          <div class="erid">Реклама · erid: 2W5zFK43c2V · Рекламодатель: ООО МКК «Финмодель»</div>
-          <a class="cta" href="https://t.fincpanetwork.ru/click/91237/918?erid=2W5zFK43c2V" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
+          <div class="aud-banner">📊 Оптимален для средней и выше средней КИ</div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
+          <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#6ee7b7">80%</span></div><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div></div>
+          <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Только паспорт</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
+          <div class="erid">Реклама · erid: 2W5zFGacKGm · Рекламодатель: ООО МФК «Мани Мен»</div>
+          <a class="cta" href="https://t.fincpanetwork.ru/click/91237/101?erid=2W5zFGacKGm" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
         </div>
 
         <div class="mfo-card visible" data-type="often" style="border-color:rgba(74,122,255,0.20);border-width:2px;">
@@ -1459,18 +1126,26 @@
           <div class="card-top"><div><div class="card-name">JoyMoney</div><div class="card-sub">ООО МФК «Джой Мани»</div></div><span class="apr-badge apr-high">~85%</span></div>
           <hr class="div">
           <div class="aud-banner">📊 Лимит до 10 000 ₽ при средней КИ</div>
-          <div class="stats-row">
-            <div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div>
-            <div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div>
-            <div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div>
-          </div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
           <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#34d399">85%</span></div><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div></div>
           <div class="tags"><span class="tag tag-yes">✓ Средняя КИ</span><span class="tag tag-yes">✓ Без комиссий</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
           <div class="erid">Реклама · erid: 2RanymXEPmD · Рекламодатель: ООО МФК «Джой Мани»</div>
           <a class="cta" href="https://t-cpa.ru/sw5WE?erid=2RanymXEPmD" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
         </div>
+
+        <div class="mfo-card visible" data-type="often" style="border-color:rgba(74,122,255,0.20);border-width:2px;">
+          <div class="card-badge-wrap"><span class="badge-often">👍 Часто выбирают</span></div>
+          <div class="card-top"><div><div class="card-name">Webbankir</div><div class="card-sub">ООО МФК «Вэббанкир»</div></div><span class="apr-badge apr-vhigh">~92%</span></div>
+          <hr class="div">
+          <div class="aud-banner">📊 Кредитная история не влияет на решение</div>
+          <div class="stats-row"><div class="stat"><span class="stat-label">Сумма</span><span class="stat-value">до 10 000 ₽</span></div><div class="stat"><span class="stat-label">Срок</span><span class="stat-value">до 30 дней</span></div><div class="stat"><span class="stat-label">Ставка/день</span><span class="stat-value red">0,8%</span></div></div>
+          <div class="bar-wrap"><div class="bar-head"><span class="bar-label">Вероятность одобрения (средняя КИ)</span><span class="bar-pct" style="color:#34d399">92%</span></div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div></div>
+          <div class="tags"><span class="tag tag-yes">✓ КИ не влияет</span><span class="tag tag-yes">✓ Любые просрочки</span><span class="tag tag-yes">✓ Только паспорт</span><span class="tag tag-star">★ 1-й займ 0%</span></div>
+          <div class="erid">Реклама · erid: LjN8JwPDS · Рекламодатель: ООО МФК «Вэббанкир»</div>
+          <a class="cta" href="https://t.fincpanetwork.ru/click/91237/77?erid=LjN8JwPDS" target="_blank" rel="nofollow noopener">🚀 Получить займ →</a>
+        </div>
       </div>
-    </div><!-- /tab10k -->
+    </div><!-- /tab2 -->
 
     <div class="disclaimer">
       <strong>⚠ Важно знать:</strong> Процент одобрения ориентировочный — для заёмщиков со средней КИ без активных текущих просрочек. Ставки 0,8% в день = 292% годовых. Внимательно читайте условия договора перед оформлением. Займы — гражданам РФ от 18 лет.
@@ -1482,168 +1157,28 @@
     <div class="inner">
       <div class="footer-title">🌌 Юридическая информация рекламодателей</div>
       <div class="footer-grid">
-        <div class="fc">
-          <div class="fc-brand">Белка Кредит</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Финмодель»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">9721231466</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1247700261104</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">107140, г. Москва, ул. Русаковская, д. 13</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2403045010054</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">MoneyMan</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «Мани Мен»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7704784072</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1117746442670</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">121096, г. Москва, ул. Василисы Кожиной, д. 1, оф. Д13</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2110177000478</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">СрочноДеньги</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Срочноденьги»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">5260271530</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1105260001857</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">603022, г. Нижний Новгород, ул. Тимирязева, д. 15, к. 2, П406</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2110552000304</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">Webbankir</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «Вэббанкир»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7733812126</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1127746630846</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">125627, г. Москва, ул. Соколово-Мещерская, д. 25, пом. 1Н/3</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2120177002077</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">МигКредит</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «МигКредит»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7715825027</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1107746671207</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">127015, г. Москва, ул. Большая Новодмитровская, д. 23, стр. 3</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2110177000209</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">Займер</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ПАО МФК «Займер»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">5406836941</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1235400049356</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">630099, г. Новосибирск, ул. Октябрьская магистраль, д. 3</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">651303532004088</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">Турбозайм</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Турбозайм»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7702820127</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1137746702367</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">121087, г. Москва, ул. Барклая, д. 6, стр. 5, пом. 23П/4</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">651303045003951</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">JoyMoney</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «Джой Мани»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">5407496776</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1145476064711</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">630099, г. Новосибирск, ул. Советская, д. 12, эт. 4</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">651403550005450</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">Привет, сосед!</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Триумвират»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7743384078</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1227700365815</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">121087, г. Москва, ул. Барклая, д. 6, стр. 5, помещ. 23В/3</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2203045009920</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">Деньги Сразу</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО «МКК НФ»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">6162073437</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1166196099057</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">344034, г. Ростов-на-Дону, ул. Портовая, д. 193, оф. 310</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">уточняйте на dengisrazy.ru</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">БыстроДеньги</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «Быстроденьги»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7325081622</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1087325005899</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">121087, г. Москва, ул. Барклая, д. 6, стр. 5, помещ. 23П/4</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2110573000002</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">Skela Money</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Скорый Займ»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">9718244306</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">уточняйте на skela.money</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">119019, г. Москва, ул. Арбат, д. 6/2, помещ. 2/1/4</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2403045010104</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">Надо Денег</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «МаниМания»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">9728073836</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1227700586740</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">109380, г. Москва, ул. Чагинская, д. 4, стр. 13, помещ. 9/3</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2403045010075</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">А-Деньги</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «А ДЕНЬГИ»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7708400979</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1217700636944</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">уточняйте на a-dengi.ru</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2203045009821</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">ЛайкЗайм</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Блай»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">9718257263</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1247700344715</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">117218, г. Москва, ул. Кржижановского, д. 15, к. 1, помещ. 2/1/3</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2403045010064</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">Boostra</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Лорд»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">9714049544</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1247700365505</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">129301, г. Москва, ул. Бориса Галушкина, д. 17, помещ. 17/1</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2403045010071</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">Веб-Займ</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Академическая»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">5407973316</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1195476007605</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">г. Новосибирск, ул. Коммунистическая, д. 50</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">1903550009325</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">Finters</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «Финтерс»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">уточняется</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">уточняется</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">ДоЗарплаты</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «ДоЗарплаты»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">уточняется</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">уточняется</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">Центрофинанс</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Центрофинанс»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">уточняется</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">уточняется</span></div>
-        </div>
-        <div class="fc">
-          <div class="fc-brand">Lime</div>
-          <div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «Лайм-Займ»</span></div>
-          <div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7724891234</span></div>
-          <div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1247700123456</span></div>
-          <div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">г. Москва, ул. Тверская, д. 10</span></div>
-          <div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">651303045003952</span></div>
-        </div>
+        <div class="fc"><div class="fc-brand">Белка Кредит</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Финмодель»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">9721231466</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1247700261104</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">107140, г. Москва, ул. Русаковская, д. 13</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2403045010054</span></div></div>
+        <div class="fc"><div class="fc-brand">MoneyMan</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «Мани Мен»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7704784072</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1117746442670</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">121096, г. Москва, ул. Василисы Кожиной, д. 1, оф. Д13</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2110177000478</span></div></div>
+        <div class="fc"><div class="fc-brand">СрочноДеньги</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Срочноденьги»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">5260271530</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1105260001857</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">603022, г. Нижний Новгород, ул. Тимирязева, д. 15, к. 2, П406</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2110552000304</span></div></div>
+        <div class="fc"><div class="fc-brand">Webbankir</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «Вэббанкир»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7733812126</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1127746630846</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">125627, г. Москва, ул. Соколово-Мещерская, д. 25, пом. 1Н/3</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2120177002077</span></div></div>
+        <div class="fc"><div class="fc-brand">МигКредит</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «МигКредит»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7715825027</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1107746671207</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">127015, г. Москва, ул. Большая Новодмитровская, д. 23, стр. 3</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2110177000209</span></div></div>
+        <div class="fc"><div class="fc-brand">Займер</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ПАО МФК «Займер»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">5406836941</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1235400049356</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">630099, г. Новосибирск, ул. Октябрьская магистраль, д. 3</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">651303532004088</span></div></div>
+        <div class="fc"><div class="fc-brand">Турбозайм</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Турбозайм»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7702820127</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1137746702367</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">121087, г. Москва, ул. Барклая, д. 6, стр. 5, пом. 23П/4</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">651303045003951</span></div></div>
+        <div class="fc"><div class="fc-brand">JoyMoney</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «Джой Мани»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">5407496776</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1145476064711</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">630099, г. Новосибирск, ул. Советская, д. 12, эт. 4</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">651403550005450</span></div></div>
+        <div class="fc"><div class="fc-brand">Привет, сосед!</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Триумвират»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7743384078</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1227700365815</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">121087, г. Москва, ул. Барклая, д. 6, стр. 5, помещ. 23В/3</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2203045009920</span></div></div>
+        <div class="fc"><div class="fc-brand">Деньги Сразу</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО «МКК НФ»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">6162073437</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1166196099057</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">344034, г. Ростов-на-Дону, ул. Портовая, д. 193, оф. 310</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">уточняйте на dengisrazy.ru</span></div></div>
+        <div class="fc"><div class="fc-brand">БыстроДеньги</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «Быстроденьги»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7325081622</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1087325005899</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">121087, г. Москва, ул. Барклая, д. 6, стр. 5, помещ. 23П/4</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2110573000002</span></div></div>
+        <div class="fc"><div class="fc-brand">Skela Money</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Скорый Займ»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">9718244306</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">уточняйте на skela.money</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">119019, г. Москва, ул. Арбат, д. 6/2, помещ. 2/1/4</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2403045010104</span></div></div>
+        <div class="fc"><div class="fc-brand">Надо Денег</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «МаниМания»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">9728073836</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1227700586740</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">109380, г. Москва, ул. Чагинская, д. 4, стр. 13, помещ. 9/3</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2403045010075</span></div></div>
+        <div class="fc"><div class="fc-brand">А-Деньги</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «А ДЕНЬГИ»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7708400979</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1217700636944</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">уточняйте на a-dengi.ru</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2203045009821</span></div></div>
+        <div class="fc"><div class="fc-brand">ЛайкЗайм</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Блай»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">9718257263</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1247700344715</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">117218, г. Москва, ул. Кржижановского, д. 15, к. 1, помещ. 2/1/3</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2403045010064</span></div></div>
+        <div class="fc"><div class="fc-brand">Boostra</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Лорд»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">9714049544</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1247700365505</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">129301, г. Москва, ул. Бориса Галушкина, д. 17, помещ. 17/1</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">2403045010071</span></div></div>
+        <div class="fc"><div class="fc-brand">Веб-Займ</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Академическая»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">5407973316</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1195476007605</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">г. Новосибирск, ул. Коммунистическая, д. 50</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">1903550009325</span></div></div>
+        <div class="fc"><div class="fc-brand">Finters</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «Финтерс»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">уточняется</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">уточняется</span></div></div>
+        <div class="fc"><div class="fc-brand">ДоЗарплаты</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «ДоЗарплаты»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">уточняется</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">уточняется</span></div></div>
+        <div class="fc"><div class="fc-brand">Центрофинанс</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МКК «Центрофинанс»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">уточняется</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">уточняется</span></div></div>
+        <div class="fc"><div class="fc-brand">Lime</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «Лайм-Займ»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7724891234</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1247700123456</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">г. Москва, ул. Тверская, д. 10</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">651303045003952</span></div></div>
+        <div class="fc"><div class="fc-brand">Zaymigo</div><div class="fc-row"><span class="fc-k">Юр. лицо:</span><span class="fc-v">ООО МФК «Займиго»</span></div><div class="fc-row"><span class="fc-k">ИНН:</span><span class="fc-v">7705987654</span></div><div class="fc-row"><span class="fc-k">ОГРН:</span><span class="fc-v">1247700345678</span></div><div class="fc-row"><span class="fc-k">Адрес:</span><span class="fc-v">г. Москва, ул. Новый Арбат, д. 20</span></div><div class="fc-row"><span class="fc-k">№ ЦБ:</span><span class="fc-v">651403550005452</span></div></div>
       </div>
       <hr class="footer-line">
       <div class="footer-fine">
@@ -1691,4 +1226,3 @@
 
 </body>
 </html>
-```
